@@ -95,6 +95,6 @@ footer a:hover {color:#fff}
 #ContactForm  span {float:left;width:150px}
 #ContactForm a {margin-left:15px;float:right;width:224px;padding:0;text-align:center}
 #ContactForm .input  {margin:0;width:420px;height:18px;background:none;padding:4px 10px;color:#000;font:14px Arial, Helvetica, sans-serif}
-#ContactForm textarea  {overflow:auto;width:820px;height:160px;background:none;padding:4px 10px;color:#000;font:14px Arial, Helvetica, sans-serif;margin:0}
+textarea  {overflow:auto;width:820px;height:160px;background:none;padding:4px 10px;color:#000;font:14px Arial, Helvetica, sans-serif;margin:0}
 #ContactForm  .bg {background:#BEAFD6; position:relative;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;float:left}
 #ContactForm .seleccion {background:#BEAFD6;color:#000}

@@ -38,7 +38,7 @@
 			}
 	  
             $con = new mysqli('mysql.hostinger.com.ar','u568085940_belg', 'Jeremias1023', 'u568085940_telef');
-            $sql = "SELECT id, telefono, nombre, calle, piso, departamento, numero FROM telefonos where estado = -1 and congregacion=1 ORDER BY RAND()";
+            $sql = "SELECT id, telefono, nombre, calle, piso, departamento, numero FROM telefonos where estado = -1 and congregacion=$a ORDER BY RAND()";
 			if($c=="cartas"){
 				$sql = "SELECT id, telefono, nombre, calle, piso, departamento, numero FROM telefonos". 
 				   " where id=(select min(id) from telefonos where estado = 1 and congregacion=".$a.
