@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<script type="text/javascript" src="js/jquery-2.0.3.js" ></script>
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/cufon-replace.js"></script>  
+		<script type="text/javascript" src="js/Vegur_300.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_700.font.js"></script>
+		<script type="text/javascript" src="js/PT_Sans_400.font.js"></script>
+		<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		
+
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+		<![endif]-->
+		<!--[if lt IE 7]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+			</div>
+		<![endif]-->
+	</head>
+	<body id="page5">
+		<div class="main">
+<!--header -->
+			<header>
+				<div class="wrapper">
+					<h4>Predicación Telef&oacute;nica y por Cartas</h4>
+				</div>
+				<nav>
+					<ul id="menu">
+						<li class="active"><a href="index.html"><span>Predicar</span></a></li>
+						<li class="last"><a href="Admin.php"><span>Administrar</span></a></li>
+					</ul>
+				</nav>
+			</header>
+<!--header end-->
+<!--content -->
+			
+			<div class="container">
+				<div class="col-sm-12">
+					<h2>Ingrese los datos</h2>
+					<br>
+					<br>
+					<form id="ContactForm" method="post">
+						<div>
+							<div class="wrapper">
+								<span>Apellido y Nombre:</span>
+								<div class="bg"><input type="text" id="nameApe" class="input" style="text-transform:uppercase"></div>
+							</div>
+							<div class="wrapper">
+								<span>Congregacion:</span>
+								<div class="bg" style="width: 420px;">
+												<select id="congre" class="seleccion" style="width: 410px;">
+												  <option value="1" selected>BELGRANO</option>
+												</select></div>								
+							</div>
+							<div class="wrapper">
+								<span>Telefonica:</span>
+								<input type="radio" name="tipo" value="telefonos"><br>
+							    <span>Carta:</span>
+								<input type="radio" name="tipo" value="cartas">								
+							</div>
+							<br>
+							<div id="existe" class="alert alert-danger" style="display:none">
+							  ¡El nombre ingresado no esta registrado!
+							</div>
+							<div id="noresultados" class="alert alert-danger" style="display:none">
+							  ¡No existen resultados para mostrar!
+							</div>
+							<div id="obligatorios" class="alert alert-danger" style="display:none">
+							  ¡Debe ingresar todos los datos obligatorios!
+							</div>
+							<div id="exito" class="alert alert-success" style="display:none">
+							  <strong>Exito!</strong> Se actualizo el registro con exito, presiona el bot&oacute;n para pasar al siguiente!
+							</div>
+							<div id="datosAmo" style="display:none">
+								<input type="hidden" id="id" value="">
+								<div class="wrapper">
+									<span>Telefono:</span>
+									<div class="bg"><input type="text" id="numTele" class="input" readonly></div>
+								</div>	
+								<div class="wrapper">
+									<span>Nombre:</span>
+									<div class="bg"><input type="text" id="nomAmo" class="input" style="text-transform:uppercase" readonly></div>
+								</div>	
+								<div class="wrapper">
+									<span>Direcci&oacute;n:</span>
+									<div class="bg"><input type="text" id="dirAmo" class="input" style="text-transform:uppercase" readonly></div>
+								</div>
+								<div class="wrapper">
+									<span>Piso:</span>
+									<div class="bg"><input type="text" id="piso" class="litle" readonly></div>
+								</div>	
+								<div class="wrapper">
+									<span>Dpto:</span>
+									<div class="bg"><input type="text" id="dpto" class="litle" style="text-transform:uppercase" readonly></div>
+								</div>
+								<div class="wrapper">
+								<span>Resultado:</span>
+								<div id="ptelefono">
+									<select id="estado" class="seleccion">
+									  <option value="-1">Seleccione...</option>
+									  <option value="0">Hable con el amo de casa</option>
+									  <option value="1">No en casa</option>
+									  <option value="2">Contestador - Deje mensaje</option>
+									  <option value="3">Contestador – No deje mensaje</option>
+									  <option value="4">No llamar mas</option>
+									  <option value="5">Tel&eacute;fono inactivo</option>
+									  <option value="6">Cambiar de Tel&eacute;fono</option>
+									</select>
+								</div>
+								<div id="pcartas">
+									<select id="estadocartas" class="seleccion">
+									  <option value="-1">Seleccione...</option>
+									  <option value="0">Deje Carta</option>
+									  <option value="6">Cambiar de Tel&eacute;fono</option>
+									</select>
+								</div>
+								</div>
+							</div>
+							<!--a href="#" class="button1" onClick="document.getElementById('ContactForm').submit()">Tomar Amo de Casa</a-->
+							<input type="button" class="button1" value="Tomar Amo de Casa" id="button1"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript"> 
+			var predicarFunctions = function() {
+				$('#estado, #estadocartas').off();
+				$('#estado, #estadocartas').on("change", function() {
+					var id = $('#id').val();
+					var estado = $('#estado').val();
+					var tipo = $("#ContactForm input[type='radio']:checked").val();
+					
+					if(tipo=="cartas"){
+						estado = $('#estadocartas').val();
+					}
+					
+					var dataString = 'id='+ id + '&estado='+ estado + '&tipo='+ tipo;
+					
+					if(id==''||estado==''||tipo==''||id==undefined||estado==undefined||tipo==undefined)
+					{
+						alert(dataString);
+					}else{
+						$.ajax({
+							type: "POST",
+							url: "territorio/cambiarEstado.php",
+							data: dataString,
+							cache: false,
+							success: function(data){
+								var a = jQuery.parseJSON(data);
+								if(a.exito=="S"){
+									$("div#existe").hide("slow");
+									$("div#noresultados").hide("slow");
+									$("div#datosAmo").hide("slow");
+									$("div#obligatorios").hide("slow");
+									$("div#datosAmo").hide("slow");
+									$("div#exito").show("slow");
+									$("#estado").val("-1");
+									$("#estadocartas").val("-1");
+								}else{
+									$("div#existe").hide("slow");
+									$("div#noresultados").hide("slow");
+									$("div#datosAmo").hide("slow");
+									$("div#obligatorios").show("slow");
+									$("#estado").val("-1");
+									$("#estadocartas").val("-1");
+								}
+							}
+						});	
+					}
+				})
+			
+				$('#button1').off();
+				$('#button1').on("click", function() {
+					var nameApe = $('#nameApe').val();
+					var congre = $('#congre').val();
+					var tipo = $("#ContactForm input[type='radio']:checked").val();
+					
+					var dataString = 'nameApe='+ nameApe + '&congre='+ congre + '&tipo='+ tipo;
+					
+					if(nameApe==''||congre==''||tipo==''||nameApe==undefined||congre==undefined||tipo==undefined)
+					{
+						$("div#existe").hide("slow");
+						$("div#noresultados").hide("slow");
+						$("div#datosAmo").hide("slow");
+						$("div#obligatorios").show("slow");
+					}
+					else
+					{					
+						$.ajax({
+							type: "POST",
+							url: "territorio/Buscar.php",
+							data: dataString,
+							cache: false,
+							success: function(data){
+								
+								var a = jQuery.parseJSON(data);
+								if(a.existe=='E'){
+									$("div#existe").show("slow");
+									$("div#datosAmo").hide("slow");
+									$("div#noresultados").hide("slow");
+									$("div#obligatorios").hide("slow");
+									$("div#exito").hide("slow");
+								}else if(a.existe=='Y'){
+									$("#id").val(a.id);
+									$("#numTele").val(a.numTele);
+									$("#nomAmo").val(a.nomAmo);
+									$("#dirAmo").val(a.dirAmo);
+									$("#piso").val(a.piso);
+									$("#dpto").val(a.dpto);
+									$("div#existe").hide("slow");
+									$("div#noresultados").hide("slow");
+									$("div#obligatorios").hide("slow");
+									$("div#exito").hide("slow");
+									if(tipo=="cartas"){
+										$("div#ptelefono").hide();
+										$("div#pcartas").show();
+									}else{
+										$("div#ptelefono").show();
+										$("div#pcartas").hide();
+									}
+									$("div#datosAmo").show("slow");
+								}else if(a.existe=='N'){
+									$("div#existe").hide("slow");
+									$("div#datosAmo").hide("slow");
+									$("div#obligatorios").hide("slow");
+									$("div#exito").hide("slow");
+									$("div#noresultados").show("slow");
+								}
+										
+								if(tipo=="telefonos")
+										$("#button1").val("Siguiente Teléfono");
+									else
+										$("#button1").val("Siguiente Carta");
+							}
+						});
+					}
+				});
+			}
+			predicarFunctions();
+			Cufon.now(); 
+		</script>
+	</body>
+</html>
